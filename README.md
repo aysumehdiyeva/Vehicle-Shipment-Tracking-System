@@ -79,3 +79,173 @@ This class represents the base shipment and includes common attributes:
 - customer
 
 It defines the abstract method:
+calculatePrice()
+
+Each subclass calculates the shipment price differently.
+
+---
+
+## Inheritance
+
+Two subclasses extend the Shipment class:
+```
+Shipment
+│
+├── OpenCarrierShipment
+└── EnclosedShipment
+```
+
+### OpenCarrierShipment
+Price depends on the number of cars transported.
+
+### EnclosedShipment
+Price depends on:
+- luxury vehicle option
+- insurance fee
+
+---
+
+## Interface
+TrackableInterface
+
+Defines the method:
+trackShipment(int shipmentId)
+
+Implemented by:
+UserSession
+
+---
+
+## System Class
+
+---
+
+## System Class
+ShippingSystem
+
+Responsible for managing shipments using collections.
+
+Uses:
+
+- `ArrayList<Shipment>` to store shipments
+- `HashSet<Integer>` to prevent duplicate shipment IDs
+
+Main system methods:
+
+- addShipment()
+- displayShipments()
+- searchShipment()
+- deleteShipment()
+- calculateTotalRevenue()
+- getTrackingInfo()
+
+---
+
+# 📦 Data Classes
+
+## Customer
+
+Stores customer information:
+
+- customerId
+- name
+- phone number
+- email
+
+Provides methods for retrieving and updating customer details.
+
+---
+
+## Admin
+
+Handles authentication for administrators.
+
+Login method:
+login(username, password)
+
+---
+
+# 📂 Project Structure
+```
+src/
+│
+├── ShipmentMain.java
+├── ShippingSystem.java
+├── Shipment.java
+├── OpenCarrierShipment.java
+├── EnclosedShipment.java
+├── Customer.java
+├── Admin.java
+├── UserSession.java
+├── TrackableInterface.java
+│
+├── RoleSelectionFrame.java
+├── LoginFrame.java
+├── MainFrame.java
+└── UserTrackingFrame.java
+```
+
+---
+
+# ▶️ Running the Project
+
+### 1. Clone the repository
+git clone https://github.com/aysumehdiyeva/vehicle-shipment-tracking-system.git
+
+### 2. Open the project in Eclipse
+File → Import → Existing Projects into Workspace
+
+### 3. Run the application
+
+Run the main class:
+ShipmentMain.java
+
+---
+
+# 🧪 Example Workflow
+
+1️⃣ Start the application  
+
+2️⃣ Select **Admin** or **User**
+
+### Admin
+
+- Login with credentials  
+- Add shipments  
+- Display shipments  
+- Search shipments  
+- Delete shipments  
+- Track shipment status  
+- View total revenue  
+
+### User
+
+- Enter shipment ID  
+- View shipment tracking information  
+
+---
+
+# 🛠 Technologies Used
+
+- Java
+- Java Swing
+- Eclipse IDE
+- Object-Oriented Programming
+- Java Collections Framework (ArrayList, HashSet)
+
+---
+
+# 📚 Course Information
+
+Course: **CTIS221 – Object Oriented Programming**  
+Semester: **Fall 2025 – 2026**
+
+The project demonstrates the use of:
+
+- Abstract classes
+- Interfaces
+- Inheritance
+- Encapsulation
+- Collections
+- GUI programming
+- Event handling
