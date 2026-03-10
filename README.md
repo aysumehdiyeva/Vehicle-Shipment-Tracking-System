@@ -161,7 +161,7 @@ Provides methods for retrieving and updating customer details.
 Handles authentication for administrators.
 
 Login method:
-login(username, password)
+login(username, password) 
 
 ---
 
@@ -235,12 +235,7 @@ ShipmentMain.java
 
 ---
 
-# 📚 Course Information
-
-Course: **CTIS221 – Object Oriented Programming**  
-Semester: **Fall 2025 – 2026**
-
-The project demonstrates the use of:
+# The project demonstrates the use of:
 
 - Abstract classes
 - Interfaces
